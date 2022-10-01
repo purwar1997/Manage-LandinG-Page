@@ -24,4 +24,4 @@ This website is divided into following sections :-
 
 ![Preview](./preview.png)
 
-### [**Live link**](https://manage-landing-page-qyjt.vercel.app/) of the project.
+### [**Live link**](https://manage-landing-page-2jyk.vercel.app/) of the project.
