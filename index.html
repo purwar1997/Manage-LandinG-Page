@@ -4,17 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/icons8-manage-64.png" type="image/png" />
+
+    <!-- Linking font awesome library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           screens: {
-            xl: "1200px",
-            lg: "970px",
-            md: "850px",
-            sm: "550px",
+            sm: "640px",
+            md: "880px",
+            lg: "1000px",
+            xl: "1250px",
           },
+
           extend: {
+            backgroundImage: {
+              "hero-image": "url('./images/bg-tablet-pattern.svg')",
+            },
+
             colors: {
               brightRed: "hsl(12, 88%, 59%)",
               brightRedLight: "hsl(12, 88%, 69%)",
@@ -27,24 +43,23 @@
         },
       };
     </script>
-    <link rel="icon" href="./images/favicon-32x32.png" type="image/png" />
     <title>Manage Landing Page</title>
   </head>
   <body
-    class="bg-[url('./images/bg-tablet-pattern.svg')] bg-no-repeat bg-[length:700px] bg-[position:94%_-16%]"
+    class="bg-hero-image bg-no-repeat bg-[length:700px] bg-[position:98%_-18%]"
   >
     <!-- Navbar -->
     <nav>
       <div
-        class="container max-w-[1300px] mx-auto px-[50px] py-[30px] flex items-center justify-between"
+        class="container mx-auto px-8 py-8 flex items-center justify-between"
       >
         <!-- Logo -->
-        <a class="mx-auto sm:mx-0" href="">
+        <a href="#">
           <img src="./images/logo.svg" alt="logo" />
         </a>
 
         <!-- Navigation links -->
-        <ul class="hidden space-x-[30px] lg:flex">
+        <ul class="hidden space-x-9 lg:flex">
           <li>
             <a class="text-lg font-medium hover:text-darkGrayishBlue" href=""
               >Pricing</a
@@ -76,22 +91,28 @@
           </li>
         </ul>
 
+        <!-- Get started button -->
         <button
-          class="hidden bg-brightRed text-white text-lg font-medium px-[20px] py-[8px] rounded-full transition hover:bg-brightRedLight sm:block"
+          class="hidden bg-brightRed text-white text-lg font-medium px-5 py-2 rounded-full transition duration-200 hover:bg-brightRedLight lg:block"
         >
           Get Started
         </button>
+
+        <!-- Hamburger icon -->
+        <div class="lg:hidden cursor-pointer">
+          <i class="text-xl fa-solid fa-bars"></i>
+        </div>
       </div>
     </nav>
 
     <!-- Hero section -->
     <header>
       <div
-        class="container max-w-[1300px] mx-auto px-[50px] pt-[20px] pb-[40px] flex flex-col-reverse items-center justify-between space-y-[20px] space-y-reverse md:flex-row md:space-y-0 md:py-[20px]"
+        class="container mx-auto px-8 py-8 flex flex-col-reverse items-center gap-5 md:flex-row md:justify-between"
       >
         <!-- Content -->
-        <div class="w-[90%] space-y-[30px] text-center md:w-[40%] md:text-left">
-          <h1 class="text-4xl font-bold lg:text-5xl">
+        <div class="space-y-7 text-center md:text-left md:w-[45%]">
+          <h1 class="text-3xl font-bold md:text-4xl lg:text-5xl">
             Bring everyone together to build better products
           </h1>
 
@@ -102,29 +123,27 @@
           </p>
 
           <button
-            class="bg-brightRed text-white text-lg font-medium px-[20px] py-[8px] rounded-full transition hover:bg-brightRedLight"
+            class="bg-brightRed text-white sm:text-lg font-medium px-5 py-2 rounded-full transition duration-200 hover:bg-brightRedLight"
           >
             Get Started
           </button>
         </div>
 
         <!-- Main illustration -->
-        <img
-          class="w-[350px] lg:w-[450px]"
-          src="./images/illustration-intro.svg"
-          alt="illustration"
-        />
+        <div class="md:w-[45%]">
+          <img src="./images/illustration-intro.svg" alt="illustration" />
+        </div>
       </div>
     </header>
 
     <!-- Description -->
     <section>
       <div
-        class="container max-w-[1300px] mx-auto px-[50px] py-[20px] flex flex-col items-center justify-between space-y-[40px] md:flex-row md:items-start md:space-y-0"
+        class="container mx-auto px-8 py-5 flex flex-col items-center gap-10 md:flex-row md:items-start md:justify-between"
       >
         <!-- Content -->
-        <div class="w-[90%] space-y-[30px] text-center md:w-[40%] md:text-left">
-          <h2 class="text-3xl font-bold md:text-4xl">
+        <div class="space-y-7 text-center md:text-left md:w-[45%]">
+          <h2 class="text-2xl font-bold sm:text-3xl md:text-4xl">
             What's different about Manage?
           </h2>
 
@@ -135,22 +154,25 @@
           </p>
         </div>
 
-        <!-- Features -->
-        <div class="w-[90%] space-y-[30px] md:w-[45%]">
+        <!-- List of Features -->
+        <div class="space-y-7 md:w-[45%]">
           <!-- Feature 1 -->
-          <div class="space-y-[15px]">
+          <div class="space-y-2.5">
             <!-- Header -->
             <div
-              class="text-lg font-bold flex items-center space-x-[20px] bg-brightRedSupLight rounded-full sm: md:text-2xl md:bg-white"
+              class="text-lg font-bold flex items-center justify-center gap-5 bg-brightRedSupLight rounded-full sm:justify-start md:text-2xl md:bg-white"
             >
               <span
-                class="bg-brightRed px-[20px] py-[5px] rounded-full text-white"
+                class="hidden bg-brightRed px-5 py-1.5 rounded-full text-white sm:inline-block"
                 >01</span
               >
-              <h3 class="py-[5px]">Track company-wide progress</h3>
+              <h3 class="py-1.5 text-center sm:text-left">
+                Track company-wide progress
+              </h3>
             </div>
 
-            <p class="text-center sm:pl-[90px] sm:text-left">
+            <!-- Text -->
+            <p class="text-center sm:text-left sm:pl-20 md:pl-[90px]">
               See how your day-to-day tasks fit into the wider vision. Go from
               tracking progress at the milestone level all the way down to the
               smallest of details. Never lose sight of the bigger picture again.
@@ -158,19 +180,22 @@
           </div>
 
           <!-- Feature 2 -->
-          <div class="space-y-[15px]">
+          <div class="space-y-2.5">
             <!-- Header -->
             <div
-              class="text-lg font-bold flex items-center space-x-[20px] bg-brightRedSupLight rounded-full md:text-2xl md:bg-white"
+              class="text-lg font-bold flex items-center justify-center gap-5 bg-brightRedSupLight rounded-full sm:justify-start md:text-2xl md:bg-white"
             >
               <span
-                class="bg-brightRed px-[20px] py-[5px] rounded-full text-white"
+                class="hidden bg-brightRed px-5 py-1.5 rounded-full text-white sm:inline-block"
                 >02</span
               >
-              <h3>Advanced built-in reports</h3>
+              <h3 class="py-1.5 text-center sm:text-left">
+                Advanced built-in reports
+              </h3>
             </div>
 
-            <p class="text-center sm:pl-[90px] sm:text-left">
+            <!-- Text -->
+            <p class="text-center sm:text-left sm:pl-20 md:pl-[90px]">
               Set internal delivery estimates and track progress toward company
               goals. Our customisable dashboard helps you build out the reports
               you need to keep key stakeholders informed.
@@ -178,19 +203,22 @@
           </div>
 
           <!-- Feature 3 -->
-          <div class="space-y-[15px]">
+          <div class="space-y-2.5">
             <!-- Header -->
             <div
-              class="text-lg font-bold flex items-center space-x-[20px] bg-brightRedSupLight rounded-full md:text-2xl md:bg-white"
+              class="text-lg font-bold flex items-center justify-center gap-5 bg-brightRedSupLight rounded-full sm:justify-start md:text-2xl md:bg-white"
             >
               <span
-                class="bg-brightRed px-[20px] py-[5px] rounded-full text-white"
+                class="hidden bg-brightRed px-5 py-1.5 rounded-full text-white sm:inline-block"
                 >03</span
               >
-              <h3>Everything you need in one place</h3>
+              <h3 class="py-1.5 text-center sm:text-left">
+                Everything you need in one place
+              </h3>
             </div>
 
-            <p class="text-center sm:pl-[90px] sm:text-left">
+            <!-- Text -->
+            <p class="text-center sm:text-left sm:pl-20 md:pl-[90px]">
               Stop jumping from one service to another to communicate, store
               files, track tasks and share documents. Manage offers an
               all-in-one team productivity solution.
@@ -202,25 +230,23 @@
 
     <!-- Testimonials -->
     <section>
-      <div
-        class="container max-w-[1300px] mx-auto px-[50px] py-[60px] text-center"
-      >
-        <h2 class="text-4xl font-bold">What's different about Manage?</h2>
+      <div class="container mx-auto px-8 py-12 text-center">
+        <h2 class="text-2xl font-bold sm:text-3xl md:text-4xl">
+          What's different about Manage?
+        </h2>
 
         <!-- Testimonial Cards -->
-        <div
-          class="flex flex-col justify-between space-y-[80px] mt-[100px] md:flex-row md:space-x-[30px] md:space-y-0"
-        >
+        <div class="mt-24 flex flex-col gap-20 md:flex-row md:gap-8">
           <!-- Card 1 -->
           <div
-            class="bg-veryLightGray rounded-xl p-[30px] space-y-[20px] transition hover:scale-[1.04] md:w-1/3"
+            class="bg-veryLightGray rounded-xl p-8 space-y-5 cursor-pointer transition duration-200 hover:scale-[1.03] md:w-1/3"
           >
             <img
-              class="mx-auto w-[100px] mt-[-75px]"
+              class="mx-auto w-24 -mt-20"
               src="./images/avatar-anisha.png"
               alt="anisha"
             />
-            <h4 class="text-2xl font-semibold">Anisha Li</h4>
+            <h4 class="text-xl font-semibold sm:text-2xl">Anisha Li</h4>
             <p>
               “Manage has supercharged our team's workflow. The ability to
               maintain visibility on larger milestones at all times keeps
@@ -230,14 +256,14 @@
 
           <!-- Card 2 -->
           <div
-            class="bg-veryLightGray rounded-xl p-[30px] space-y-[20px] transition hover:scale-[1.04] md:w-1/3"
+            class="bg-veryLightGray rounded-xl p-8 space-y-5 cursor-pointer transition duration-200 hover:scale-[1.03] md:w-1/3"
           >
             <img
-              class="mx-auto w-[100px] mt-[-75px]"
+              class="mx-auto w-24 -mt-20"
               src="./images/avatar-ali.png"
               alt="ali"
             />
-            <h4 class="text-2xl font-semibold">Ali Bravo</h4>
+            <h4 class="text-xl font-semibold sm:text-2xl">Ali Bravo</h4>
             <p>
               “We have been able to cancel so many other subscriptions since
               using Manage. There is no more cross-channel confusion and
@@ -247,14 +273,14 @@
 
           <!-- Card 3 -->
           <div
-            class="bg-veryLightGray rounded-xl p-[30px] space-y-[20px] transition hover:scale-[1.04] md:w-1/3"
+            class="bg-veryLightGray rounded-xl p-8 space-y-5 cursor-pointer transition duration-200 hover:scale-[1.03] md:w-1/3"
           >
             <img
-              class="mx-auto w-[100px] mt-[-75px]"
+              class="mx-auto w-24 -mt-20"
               src="./images/avatar-richard.png"
               alt="richard"
             />
-            <h4 class="text-2xl font-semibold">Richard Watts</h4>
+            <h4 class="text-xl font-semibold sm:text-2xl">Richard Watts</h4>
             <p>
               “Manage has supercharged our team's workflow. The ability to
               maintain visibility on larger milestones at all times keeps
@@ -264,7 +290,7 @@
         </div>
 
         <button
-          class="mt-[50px] bg-brightRed text-white text-lg font-medium px-[20px] py-[8px] rounded-full transition hover:bg-brightRedLight"
+          class="mt-12 bg-brightRed text-white sm:text-lg font-medium px-5 py-2 rounded-full transition duration-200 hover:bg-brightRedLight"
         >
           Get Started
         </button>
@@ -274,16 +300,16 @@
     <!-- Get started -->
     <section class="bg-brightRed">
       <div
-        class="container max-w-[1300px] mx-auto px-[50px] py-[40px] flex flex-col justify-between items-center space-y-[30px] sm:flex-row sm:space-y-0"
+        class="container mx-auto px-8 py-12 flex flex-col items-center gap-6 sm:flex-row sm:justify-between"
       >
         <h2
-          class="text-3xl font-bold text-white text-center w-[90%] sm:text-left sm:w-[45%] md:text-4xl"
+          class="text-2xl font-bold text-white text-center sm:w-1/2 sm:text-left sm:text-3xl md:text-4xl"
         >
           Simplify how your team works today
         </h2>
 
         <button
-          class="bg-white text-brightRed text-lg font-medium px-[20px] py-[8px] rounded-full transition hover:bg-veryLightGray"
+          class="bg-white text-brightRed sm:text-lg font-medium px-5 py-2 rounded-full transition duration-200 hover:bg-veryLightGray"
         >
           Get Started
         </button>
@@ -292,14 +318,12 @@
 
     <!-- Footer -->
     <footer class="bg-veryDarkBlue">
-      <div
-        class="container max-w-[1300px] mx-auto px-[50px] py-[50px] space-y-[40px]"
-      >
+      <div class="container mx-auto px-8 py-14 space-y-14">
         <div
-          class="flex flex-col-reverse items-center justify-between space-y-[50px] space-y-reverse lg:flex-row lg:items-start lg:space-y-0"
+          class="flex flex-col-reverse items-center gap-12 lg:flex-row lg:items-start lg:justify-between"
         >
           <div
-            class="flex flex-col-reverse items-center space-y-[25px] space-y-reverse lg:flex-col lg:items-start lg:space-y-[25px]"
+            class="flex flex-col-reverse items-center gap-6 lg:flex-col lg:items-start"
           >
             <!-- Logo -->
             <a href="">
@@ -307,38 +331,38 @@
             </a>
 
             <!-- Social Links -->
-            <div class="flex items-center space-x-[20px]">
+            <div class="flex items-center gap-5">
               <a href=""
                 ><img
-                  class="h-[24px] transition hover:scale-[1.2]"
+                  class="h-6 transition hover:scale-[1.2]"
                   src="./images/icon-facebook.svg"
                   alt="facebook"
               /></a>
 
               <a href=""
                 ><img
-                  class="h-[24px] transition hover:scale-[1.2]"
+                  class="h-6 transition hover:scale-[1.2]"
                   src="./images/icon-youtube.svg"
                   alt="youtube"
               /></a>
 
               <a href=""
                 ><img
-                  class="h-[24px] transition hover:scale-[1.2]"
+                  class="h-6 transition hover:scale-[1.2]"
                   src="./images/icon-twitter.svg"
                   alt="twitter"
               /></a>
 
               <a href=""
                 ><img
-                  class="h-[24px] transition hover:scale-[1.2]"
+                  class="h-6 transition hover:scale-[1.2]"
                   src="./images/icon-pinterest.svg"
                   alt="pinterest"
               /></a>
 
               <a href=""
                 ><img
-                  class="h-[24px] transition hover:scale-[1.2]"
+                  class="h-6 transition hover:scale-[1.2]"
                   src="./images/icon-instagram.svg"
                   alt="instagram"
               /></a>
@@ -346,15 +370,15 @@
           </div>
 
           <!-- Footer links -->
-          <nav class="flex space-x-[80px] text-white">
-            <ul class="space-y-[8px]">
+          <nav class="flex gap-16 text-white">
+            <ul class="space-y-2">
               <li><a class="hover:text-brightRed" href="">Home</a></li>
               <li><a class="hover:text-brightRed" href="">Pricing</a></li>
               <li><a class="hover:text-brightRed" href="">Products</a></li>
               <li><a class="hover:text-brightRed" href="">About Us</a></li>
             </ul>
 
-            <ul class="space-y-[8px]">
+            <ul class="space-y-2">
               <li><a class="hover:text-brightRed" href="">Careers</a></li>
               <li><a class="hover:text-brightRed" href="">Community</a></li>
               <li>
@@ -365,9 +389,9 @@
 
           <!-- Email Form -->
           <form action="">
-            <div class="flex items-center space-x-[10px]">
+            <div class="flex items-center gap-2">
               <input
-                class="rounded-full px-[25px] py-[8px] focus:outline-0"
+                class="rounded-full px-6 py-2 focus:outline-0"
                 type="email"
                 name="email"
                 placeholder="Updates in your inbox"
@@ -376,7 +400,7 @@
               />
 
               <button
-                class="bg-brightRed text-white text-lg font-medium px-[18px] py-[6px] rounded-full transition hover:bg-brightRedLight"
+                class="bg-brightRed text-white sm:text-lg font-medium px-4 py-1.5 rounded-full transition duration-200 hover:bg-brightRedLight"
                 type="submit"
               >
                 Go
@@ -386,7 +410,7 @@
         </div>
 
         <!-- Copyright -->
-        <p class="hidden text-sm text-center text-white lg:block">
+        <p class="hidden text-sm text-white text-center lg:block">
           Copyright &copy; 2022. All Rights Reserved.
         </p>
       </div>

@@ -2,8 +2,7 @@
 
 ![HTML](https://img.shields.io/badge/-HTML-red)
 ![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-blueviolet)
-![Responsive](https://img.shields.io/badge/-Responsive-green)
-![Landing Page](https://img.shields.io/badge/-Landing%20Page-blue)
+![Responsive](https://img.shields.io/badge/-Responsive-blue)
 
 ## Description
 
@@ -22,6 +21,6 @@ This website is divided into following sections :-
 
 ### Preview of the project :-
 
-![Preview](./preview.png)
+![Preview](<./previews/Screenshot%20(100).png>)
 
 ### [**Live link**](https://manage-landing-page-2jyk.vercel.app/) of the project.
