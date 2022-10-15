@@ -8,7 +8,7 @@
 
 This project is a landing page for a company that helps other businessses to manage their product teams. This project is created using `HTML` and`Tailwind CSS` and is responsive for both mobile and tablet screens.
 
-## Components of a website
+## Components of the website
 
 This website is divided into following sections :-
 
