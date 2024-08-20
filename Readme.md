@@ -6,7 +6,7 @@
 
 ## Description
 
-This project is a landing page for a business that helps other businessses manage their teams. This project is built using `HTML` and `Tailwind CSS` and is responsive for both mobile and tablet screens.
+This project is a landing page for a team mangagement software. It is built using `HTML` and `Tailwind CSS` and is responsive for both mobile and tablet screens.
 
 ## Components of the landing page
 
